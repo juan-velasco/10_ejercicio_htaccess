@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Redirige la raíz (/) a /index2.php
+RewriteRule ^$ /index2.php [L,R=301]
+
+# Bloquea el acceso a todos los archivos .ini
+<FilesMatch "\.ini$">
+    Require all denied
+</FilesMatch>
