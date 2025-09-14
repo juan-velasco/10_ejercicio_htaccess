@@ -7,3 +7,4 @@ services:
       - "8080:80"
     volumes:
       - ./app.conf:/etc/apache2/sites-available/app.conf
+      - ./.htaccess:/var/www/app/.htaccess
