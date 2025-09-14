@@ -5,3 +5,5 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8080:80"
+    volumes:
+      - ./app.conf:/etc/apache2/sites-available/app.conf
