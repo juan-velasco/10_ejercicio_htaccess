@@ -19,5 +19,9 @@ EXPOSE 80
 
 # Ejecutar start.sh al iniciar el contenedor
 COPY start.sh /start.sh
+
+# Necesario por la diferencia en los saltos de línea entre Windows y otros S.O.
+RUN apt-get install -y dos2unix && dos2unix /app/start.sh
+
 RUN chmod +x /start.sh
 CMD ["/start.sh"]
