@@ -21,7 +21,7 @@ EXPOSE 80
 COPY start.sh /start.sh
 
 # Necesario por la diferencia en los saltos de línea entre Windows y otros S.O.
-RUN apt-get install -y dos2unix && dos2unix /app/start.sh
+RUN apt-get install -y dos2unix && dos2unix /start.sh
 
 RUN chmod +x /start.sh
 CMD ["/start.sh"]
